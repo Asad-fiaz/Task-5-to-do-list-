@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Carter+One&family=Monoton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Carter+One&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="h-elements">
+            
+            <h1 class="to-do-list">todolist</h1>
+        </div>
+        <div class="card">
+        <h1 class="welcome">Welcome</h1><br>
+        <input type="text" id="task-input" placeholder="Add task here...">
+        <div>
+            
+        </div>
+        <button class="add-btn" onclick="addTask()">Add List Item</button>
+        <ul id="task-list"></ul>
+    </div>
+        
+        
+    </div>
+    
+    <script>
+        function addTask() {
+            const taskInput = document.getElementById("task-input");
+            const taskList = document.getElementById("task-list");
+
+            const taskText = taskInput.value.trim();
+            if (taskText !== "") {
+                const taskItem = document.createElement("li");
+                taskItem.className = "task-item";
+                taskItem.innerHTML = `
+                    <span>${taskText}</span>
+                    <button onclick="removeTask(this)">Delete</button>
+                `;
+                taskList.appendChild(taskItem);
+                taskInput.value = "";
+            }
+        }
+
+        function removeTask(button) {
+            const taskItem = button.parentElement;
+            taskItem.remove();
+        }
+    </script>
+
+</body>
+</html>

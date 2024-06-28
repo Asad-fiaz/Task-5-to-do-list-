@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: arial,sans-serif;
+    background-color: rgb(73, 69, 69);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 300px;
+    background-color: #181818;
+    border-radius: 8px;
+    box-shadow: 0 0 10px gray;
+    padding: 0 10px;
+    display: flex;
+    
+}
+.card{
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+.container .welcome{
+    color: rgb(237, 171, 38);
+    text-align: center;
+    font-family:"Monoton" ;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+}
+.to-do-list{
+    margin-inline: 1rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: normal;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-family: "Monoton", sans-serif;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.4);
+    
+}
+
+#task-input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(237, 171, 38);
+    color: white;
+    text-transform: capitalize;
+}
+#task-input:focus{
+    border:1px solid rgb(237, 171, 38);
+    border-radius: 8px;
+    transition: transform 9s;
+}
+
+#task-list {
+    
+    list-style: none;
+    padding: 0 1px;
+    color: white;
+    
+}
+.add-btn{
+    margin-top: 10px;
+    margin-bottom: 8px;
+    padding: 6px 20px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #181818;
+    color: white;
+    border: 1px solid rgb(237, 171, 38);
+    border-radius: 10px 0 10px 0;
+}
+.add-btn:hover{
+    background-color:rgb(237, 171, 38) ;
+    border: none;
+    outline: none;
+    color: white;
+    transition: .9s ease-in-out;
+}
+.task-item {
+    display: flex;
+    text-transform: capitalize;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: rgb(237, 171, 38);
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+.task-item:hover{
+    background-color: #181818;
+    border: 1px solid rgb(237, 171, 38);
+    transition: .9s ease-in-out;
+}
+
+.task-item button {
+    border: 1px solid rgb(237, 171, 38);
+    background: #181818;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+.task-item button:hover{
+    background-color: rgb(237, 171, 38);
+    transition: .9s ease-in-out;
+}
